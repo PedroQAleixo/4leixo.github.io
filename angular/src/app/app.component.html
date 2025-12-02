@@ -18,8 +18,8 @@
         {{ theme === 'light' ? 'Dark' : 'Light' }} mode
       </button>
       <div class="lang-switch">
-        <button type="button" [class.active]="lang === 'pt'" (click)="setLanguage('pt')">🇵🇹 PT</button>
-        <button type="button" [class.active]="lang === 'en'" (click)="setLanguage('en')">🇬🇧 EN</button>
+        <button type="button" [class.active]="lang === 'pt'" (click)="setLanguage('pt')">PT</button>
+        <button type="button" [class.active]="lang === 'en'" (click)="setLanguage('en')">EN</button>
       </div>
       <a class="ghost-link" [href]="linkedinLink" target="_blank" rel="noopener">LinkedIn</a>
     </div>
@@ -36,9 +36,9 @@
           <a class="btn ghost" href="#projects">{{ t.hero.ctaSecondary }}</a>
         </div>
         <div class="chips">
-          <span class="chip">Roblox plugins</span>
-          <span class="chip">Luau</span>
-          <span class="chip">Gameplay</span>
+          <span class="chip">Roblox Dev</span>
+          <span class="chip">Backend C#/SQL</span>
+          <span class="chip">Mobile</span>
           <span class="chip">Landing pages</span>
           <span class="chip">PT / EN</span>
         </div>
@@ -88,6 +88,23 @@
           <ul class="skill-list">
             <li *ngFor="let item of cat.items">{{ item }}</li>
           </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-head">
+        <div class="pill">{{ t.experience.title }}</div>
+        <h2>{{ t.experience.title }}</h2>
+      </div>
+      <div class="grid two">
+        <article class="card experience-card" *ngFor="let item of t.experience.list">
+          <div class="experience-top">
+            <div class="period">{{ item.period }}</div>
+            <div class="role">{{ item.role }}</div>
+            <div class="company">{{ item.company }} · {{ item.location }}</div>
+          </div>
+          <p class="muted">{{ item.detail }}</p>
         </article>
       </div>
     </section>

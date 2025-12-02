@@ -35,13 +35,7 @@ interface Translation {
   nav: { about: string; projects: string; timeline: string; contact: string };
   skills: { title: string; subtitle: string; categories: { label: string; items: string[] }[] };
   experience: { title: string; list: ExperienceItem[] };
-  hero: {
-    badge: string;
-    title: string;
-    subtitle: string;
-    ctaPrimary: string;
-    ctaSecondary: string;
-  };
+  hero: { badge: string; title: string; subtitle: string; ctaPrimary: string; ctaSecondary: string };
   about: { title: string; description: string; formationTitle: string };
   formation: TimelineItem[];
   projects: { title: string; subtitle: string; list: ProjectItem[] };
@@ -68,7 +62,7 @@ export class AppComponent {
         subtitle: 'Ferramentas e linguagens que uso (INETE + ISTEC).',
         categories: [
           { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
-          { label: 'Backend / Web', items: ['C# (ASP.NET MVC)', 'SQL', 'HTML/CSS/SCSS', 'JavaScript', 'Angular'] },
+          { label: 'Backend / Web', items: ['C (bases INETE)', 'C# (ASP.NET MVC)', 'SQL', 'HTML/CSS/SCSS', 'JavaScript', 'Angular'] },
           { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Swift', 'React Native', 'Flutter'] },
           { label: 'Académico', items: ['Java', 'C#', 'Python', 'MSSQL / NoSQL', 'Redes', 'UX/Usabilidade'] },
         ],
@@ -82,7 +76,7 @@ export class AppComponent {
             company: 'MediaLog Europa',
             location: 'Lisboa, PT',
             detail:
-              'C# + SQL; novos fluxos e melhorias; suporte multilingue para site ASP.NET MVC; workflow pull/merge/push.',
+              'C# + SQL; novos fluxos e melhorias em app; suporte multilingue em site ASP.NET MVC; workflow pull/merge/push.',
           },
         ],
       },
@@ -90,14 +84,14 @@ export class AppComponent {
         badge: 'Portfólio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Dev de Roblox e backend: plugins de produtividade, sistemas em Luau e jogos com tração real. Também crio landing pages rápidas e claras. Freelancer desde 2023 (PT/EN).',
+          'Dev de Roblox e backend: plugins, sistemas em Luau e jogos com tração real. Também crio landing pages rápidas e claras. Freelancer desde 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'Ver projetos',
       },
       about: {
         title: 'Sobre',
         description:
-          'Transformo ideias em produtos claros: plugins e sistemas em Luau, jogos com resultados reais e experiências web rápidas. Formação técnica em TGPSI (INETE) e Dev Mobile (ISTEC, 2.º ano). Trabalho com clientes internacionais e mantenho uma linha do tempo transparente.',
+          'Transformo ideias em produtos claros: plugins e sistemas em Luau, jogos com resultados reais e experiências web rápidas. Formação técnica em TGPSI (INETE) e Dev Mobile (ISTEC, 2.º ano).',
         formationTitle: 'Formação',
       },
       formation: [
@@ -167,7 +161,7 @@ export class AppComponent {
         subtitle: 'Tools and languages I use daily and covered academically (INETE + ISTEC).',
         categories: [
           { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
-          { label: 'Backend / Web', items: ['C# (ASP.NET MVC)', 'SQL', 'HTML/CSS/SCSS', 'JavaScript', 'Angular'] },
+          { label: 'Backend / Web', items: ['C (foundations)', 'C# (ASP.NET MVC)', 'SQL', 'HTML/CSS/SCSS', 'JavaScript', 'Angular'] },
           { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Swift', 'React Native', 'Flutter'] },
           { label: 'Academic', items: ['Java', 'C#', 'Python', 'MSSQL / NoSQL', 'Networks', 'UX/Usability'] },
         ],
@@ -196,7 +190,7 @@ export class AppComponent {
       about: {
         title: 'About',
         description:
-          'I turn ideas into clear products: Luau plugins and systems, Roblox games with real traction, and fast web experiences. Training in TGPSI (INETE) and Dev Mobile (ISTEC, 2nd year). I work with international clients and keep a transparent timeline.',
+          'I turn ideas into clear products: Luau plugins and systems, Roblox games with real traction, and fast web experiences. Training in TGPSI (INETE) and Dev Mobile (ISTEC, 2nd year).',
         formationTitle: 'Education',
       },
       formation: [
