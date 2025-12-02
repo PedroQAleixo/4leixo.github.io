@@ -1,10 +1,10 @@
-<div class="page">
+<div class="page" [class.dark]="theme === 'dark'">
   <header class="topbar">
     <div class="brand">
       <span class="spark"></span>
       <div class="brand-text">
         <div class="brand-name">Pedro Aleixo</div>
-        <div class="brand-tag">Dev · 2020–{{ currentYear }}</div>
+        <div class="brand-tag">Dev · 2020-{{ currentYear }}</div>
       </div>
     </div>
     <nav class="nav">
@@ -14,6 +14,9 @@
       <a href="#contact">{{ t.nav.contact }}</a>
     </nav>
     <div class="actions">
+      <button type="button" class="ghost-link" (click)="toggleTheme()">
+        {{ theme === 'light' ? 'Dark' : 'Light' }} mode
+      </button>
       <div class="lang-switch">
         <button type="button" [class.active]="lang === 'pt'" (click)="setLanguage('pt')">🇵🇹 PT</button>
         <button type="button" [class.active]="lang === 'en'" (click)="setLanguage('en')">🇬🇧 EN</button>
@@ -33,11 +36,11 @@
           <a class="btn ghost" href="#projects">{{ t.hero.ctaSecondary }}</a>
         </div>
         <div class="chips">
+          <span class="chip">Roblox plugins</span>
           <span class="chip">Luau</span>
-          <span class="chip">Roblox Studio</span>
-          <span class="chip">Web</span>
-          <span class="chip">UI/UX</span>
-          <span class="chip">Performance</span>
+          <span class="chip">Gameplay</span>
+          <span class="chip">Landing pages</span>
+          <span class="chip">PT / EN</span>
         </div>
       </div>
       <div class="hero__panel">
@@ -83,9 +86,7 @@
         <article class="card soft">
           <h3>{{ t.projects.title }}</h3>
           <ul class="summary-list">
-            <li>{{ t.projects.list[0].title }} — {{ t.projects.list[0].role }}</li>
-            <li>{{ t.projects.list[1].title }} — {{ t.projects.list[1].role }}</li>
-            <li>{{ t.projects.list[2].title }} — {{ t.projects.list[2].role }}</li>
+            <li *ngFor="let project of t.projects.list | slice : 0 : 3">{{ project.title }} — {{ project.role }}</li>
           </ul>
           <div class="ribbon">
             <span>PT / EN</span>
@@ -140,7 +141,7 @@
       </div>
       <div class="timeline">
         <div class="timeline-line"></div>
-        <div class="timeline-item" *ngFor="let item of t.timeline.list; let i = index">
+        <div class="timeline-item" *ngFor="let item of timelineReversed; let i = index">
           <div class="dot"></div>
           <div class="content">
             <div class="period">{{ item.period }}</div>
@@ -160,7 +161,6 @@
         </div>
         <div class="right">
           <a class="btn primary" [href]="linkedinLink" target="_blank" rel="noopener">{{ t.contact.linkedinCta }}</a>
-          <a class="btn ghost" [href]="githubLink" target="_blank" rel="noopener">{{ t.contact.githubCta }}</a>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 type LangKey = 'pt' | 'en';
+type ThemeMode = 'light' | 'dark';
 
 interface TimelineItem {
   period: string;
@@ -13,7 +14,7 @@ interface ProjectItem {
   role: string;
   link?: string;
   stack: string[];
-  highlight: string;
+  highlight?: string;
 }
 
 interface AchievementItem {
@@ -43,7 +44,7 @@ interface Translation {
   projects: { title: string; subtitle: string; list: ProjectItem[] };
   achievements: { title: string; list: AchievementItem[] };
   timeline: { title: string; list: TimelineItem[] };
-  contact: { title: string; subtitle: string; linkedinCta: string; githubCta: string };
+  contact: { title: string; subtitle: string; linkedinCta: string };
 }
 
 @Component({
@@ -53,7 +54,8 @@ interface Translation {
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  lang: LangKey = 'pt';
+  lang: LangKey = 'en'; // default English
+  theme: ThemeMode = 'light';
 
   translations: Record<LangKey, Translation> = {
     pt: {
@@ -64,54 +66,68 @@ export class AppComponent {
         contact: 'Contacto',
       },
       hero: {
-        badge: 'Portfólio 2020–2025',
+        badge: 'Portfólio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Desenvolvedor focado em experiências digitais limpas, bilíngues e orientadas a resultado. Freelancer desde 2023, criando soluções em Luau e web.',
+          'Desenvolvo para Roblox e web: plugins e sistemas em Luau, jogos com tração real e landing pages rápidas. Freelancer desde 2023, entrego em PT/EN.',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'Ver projetos',
       },
       heroStats: [
-        { label: 'Roblox', value: '10k+', hint: 'visitas totais' },
-        { label: 'Freelancer', value: '2023', hint: 'ativo desde' },
+        { label: 'Projetos entregues', value: '10+', hint: 'PT / EN' },
+        { label: 'Freelancer', value: 'Desde 2023', hint: 'ativo' },
       ],
       about: {
         title: 'Sobre',
         description:
-          'Transformo ideias em produtos claros: sistemas personalizados em Luau, jogos Roblox com resultados reais e experiências web rápidas. Trabalhei com clientes internacionais e mantenho uma linha do tempo transparente para mostrar evolução e entregas.',
+          'Transformo ideias em produtos claros: plugins e sistemas em Luau, jogos com resultados reais e experiências web rápidas. Trabalho com clientes internacionais e mantenho uma linha do tempo transparente para mostrar evolução e entregas.',
         formationTitle: 'Formação',
       },
       formation: [
-        { period: '2020–2023', title: 'INETE · TGPSI', detail: 'Tecnologias de Informação' },
+        {
+          period: '2020-2023',
+          title: 'INETE · TGPSI',
+          detail: 'Curso profissional de Gestão e Programação de Sistemas Informáticos',
+        },
         {
           period: '2023',
-          title: 'Estágio · MediaLog Europa',
-          detail: 'Pré-ISTEC, foco em bases de desenvolvimento',
+          title: 'Estágio curricular · MediaLog Europa',
+          detail: 'Estágio final do curso INETE, bases de desenvolvimento',
         },
-        { period: '2023–presente', title: 'ISTEC · CTESP Dev Mobile', detail: 'Mobile e web' },
+        {
+          period: '2023-presente',
+          title: 'ISTEC · CTESP Dev Mobile',
+          detail: '2.º ano, foco em mobile e web',
+        },
       ],
       projects: {
         title: 'Projetos',
-        subtitle: 'Projetos reais, entregues para produção e com impacto mensurável.',
+        subtitle: 'Plugins, sistemas e jogos para Roblox — e um site real em produção.',
         list: [
           {
-            title: 'Freelancer — Luau',
-            role: 'Venda de scripts e sistemas personalizados',
-            stack: ['Luau', 'Roblox Studio', 'UI scripting'],
-            highlight: 'Entregas sob medida desde 2023, alinhadas a requisitos de cada cliente.',
+            title: 'Plugins Roblox Studio',
+            role: 'Tooling · Automação',
+            stack: ['Luau', 'Roblox Studio', 'UX de ferramenta'],
+            highlight: 'Plugins para acelerar fluxos no Studio e padronizar entregas.',
+          },
+          {
+            title: 'Sistemas & Scripts Roblox',
+            role: 'Freelancer',
+            stack: ['Luau', 'UI scripting', 'Backend in-game'],
+            highlight: 'Soluções sob medida desde 2023 para clientes internacionais.',
           },
           {
             title: 'Jogos Roblox',
             role: 'Game dev',
             stack: ['Luau', 'Gameplay', 'Analytics'],
-            highlight: 'Mais de 10.000 visitas totais somadas aos jogos publicados.',
+            highlight: 'Mais de 10.000 visitas totais em jogos publicados.',
           },
           {
             title: 'barryjamesgoodman.com',
             role: 'Website real entregue',
             link: 'https://barryjamesgoodman.com',
             stack: ['Web', 'Performance', 'SEO'],
-            highlight: 'Site institucional rápido e claro, publicado e em produção.',
+            highlight: 'Landing institucional rápida, publicada e mantida.',
           },
         ],
       },
@@ -127,17 +143,16 @@ export class AppComponent {
       timeline: {
         title: 'Trajetória',
         list: [
-          { period: '2020–2023', title: 'INETE', detail: 'Formação em TGPSI' },
-          { period: '2023', title: 'Estágio', detail: 'MediaLog Europa' },
-          { period: '2023–presente', title: 'ISTEC', detail: 'CTESP · Dev Mobile' },
-          { period: '2023–presente', title: 'Freelancer', detail: 'Scripts e sistemas em Luau' },
+          { period: '2020-2023', title: 'INETE', detail: 'Curso TGPSI' },
+          { period: '2023', title: 'Estágio', detail: 'MediaLog Europa (curricular INETE)' },
+          { period: '2023-presente', title: 'ISTEC', detail: 'CTESP · Dev Mobile (2.º ano)' },
+          { period: '2023-presente', title: 'Freelancer', detail: 'Scripts, plugins e sistemas em Luau' },
         ],
       },
       contact: {
         title: 'Contacto',
         subtitle: 'Disponível para colaborações, projetos e consultoria.',
         linkedinCta: 'LinkedIn',
-        githubCta: 'Ver GitHub',
       },
     },
     en: {
@@ -148,41 +163,47 @@ export class AppComponent {
         contact: 'Contact',
       },
       hero: {
-        badge: 'Portfolio 2020–2025',
+        badge: 'Portfolio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Developer focused on clean, bilingual, result-driven experiences. Freelancing since 2023, delivering custom systems in Luau and web.',
+          'Building Roblox and web experiences: Studio plugins, bespoke Luau systems, games with traction, and clean landing pages. Freelancing since 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'See projects',
       },
       heroStats: [
-        { label: 'Roblox', value: '10k+', hint: 'total visits' },
-        { label: 'Freelancer', value: 'Since 2023', hint: 'in production' },
+        { label: 'Shipped projects', value: '10+', hint: 'PT / EN' },
+        { label: 'Freelancer', value: 'Since 2023', hint: 'active' },
       ],
       about: {
         title: 'About',
         description:
-          'I turn ideas into clear products: custom Luau systems, Roblox games with real traction, and fast web experiences. I work with international clients and keep a transparent timeline to show growth and deliveries.',
+          'I turn ideas into clear products: Luau plugins and systems, Roblox games with real traction, and fast web experiences. I work with international clients and keep a transparent timeline to show growth and deliveries.',
         formationTitle: 'Education',
       },
       formation: [
-        { period: '2020–2023', title: 'INETE · TGPSI', detail: 'IT technologies' },
+        { period: '2020-2023', title: 'INETE · TGPSI', detail: 'Vocational program in IT management & programming' },
         {
           period: '2023',
-          title: 'Internship · MediaLog Europa',
-          detail: 'Pre-ISTEC, development fundamentals',
+          title: 'Curricular internship · MediaLog Europa',
+          detail: 'Final INETE internship, development fundamentals',
         },
-        { period: '2023–present', title: 'ISTEC · CTESP Mobile Dev', detail: 'Mobile and web' },
+        { period: '2023-present', title: 'ISTEC · CTESP Mobile Dev', detail: '2nd year, mobile & web' },
       ],
       projects: {
         title: 'Projects',
-        subtitle: 'Real engagements, shipped to production with measurable impact.',
+        subtitle: 'Roblox plugins, systems, and games — plus a shipped production website.',
         list: [
           {
-            title: 'Freelancer — Luau',
-            role: 'Custom scripts and systems',
-            stack: ['Luau', 'Roblox Studio', 'UI scripting'],
-            highlight: 'Tailored deliveries since 2023 for client-specific needs.',
+            title: 'Roblox Studio Plugins',
+            role: 'Tooling · Automation',
+            stack: ['Luau', 'Roblox Studio', 'Tool UX'],
+            highlight: 'Plugins to speed up Studio workflows and standardize delivery.',
+          },
+          {
+            title: 'Roblox Systems & Scripts',
+            role: 'Freelancer',
+            stack: ['Luau', 'UI scripting', 'In-game backend'],
+            highlight: 'Tailored solutions since 2023 for international clients.',
           },
           {
             title: 'Roblox Games',
@@ -195,7 +216,7 @@ export class AppComponent {
             role: 'Live website delivered',
             link: 'https://barryjamesgoodman.com',
             stack: ['Web', 'Performance', 'SEO'],
-            highlight: 'Fast and clear institutional site, shipped and live.',
+            highlight: 'Fast institutional landing, shipped and maintained.',
           },
         ],
       },
@@ -211,23 +232,30 @@ export class AppComponent {
       timeline: {
         title: 'Timeline',
         list: [
-          { period: '2020–2023', title: 'INETE', detail: 'TGPSI studies' },
-          { period: '2023', title: 'Internship', detail: 'MediaLog Europa' },
-          { period: '2023–present', title: 'ISTEC', detail: 'CTESP · Mobile Dev' },
-          { period: '2023–present', title: 'Freelancer', detail: 'Luau scripts and systems' },
+          { period: '2020-2023', title: 'INETE', detail: 'TGPSI studies' },
+          { period: '2023', title: 'Internship', detail: 'MediaLog Europa (curricular INETE)' },
+          { period: '2023-present', title: 'ISTEC', detail: 'CTESP · Mobile Dev (2nd year)' },
+          { period: '2023-present', title: 'Freelancer', detail: 'Scripts, plugins, and systems in Luau' },
         ],
       },
       contact: {
         title: 'Contact',
         subtitle: 'Open for collaborations, projects, and consulting.',
         linkedinCta: 'LinkedIn',
-        githubCta: 'See GitHub',
       },
     },
   };
 
   get t(): Translation {
     return this.translations[this.lang];
+  }
+
+  get timelineReversed(): TimelineItem[] {
+    return [...this.t.timeline.list].reverse();
+  }
+
+  toggleTheme(): void {
+    this.theme = this.theme === 'light' ? 'dark' : 'light';
   }
 
   setLanguage(lang: LangKey): void {
@@ -239,5 +267,4 @@ export class AppComponent {
   }
 
   linkedinLink = 'https://www.linkedin.com/in/pedro-aleixo-1ba4b8256/';
-  githubLink = 'https://github.com/4leixo';
 }

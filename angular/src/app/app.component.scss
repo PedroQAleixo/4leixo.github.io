@@ -7,6 +7,17 @@
   color: var(--ink);
 }
 
+.page.dark {
+  --bg: #0b1220;
+  --card: #111827;
+  --ink: #e5e7eb;
+  --muted: #9ca3af;
+  --line: #1f2937;
+  background: radial-gradient(120% 120% at 20% 20%, rgba(0, 188, 212, 0.12), transparent),
+    radial-gradient(100% 120% at 80% 0%, rgba(0, 102, 255, 0.1), transparent),
+    #0b1220;
+}
+
 .topbar {
   position: sticky;
   top: 0;
@@ -112,6 +123,11 @@
   box-shadow: var(--glow);
 }
 
+.page.dark .ghost-link {
+  background: #0f172a;
+  color: var(--ink);
+}
+
 main {
   padding: 3rem 6vw 4rem;
   display: flex;
@@ -203,6 +219,11 @@ main {
   gap: 0.5rem;
 }
 
+.page.dark .pill {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
 .chip {
   padding: 0.4rem 0.75rem;
   border-radius: 999px;
@@ -211,6 +232,12 @@ main {
   color: var(--muted);
   font-weight: 600;
   font-size: 0.85rem;
+}
+
+.page.dark .chip {
+  background: #111827;
+  border-color: var(--line);
+  color: var(--ink);
 }
 
 .hero__panel {
@@ -260,6 +287,10 @@ main {
   font-weight: 600;
 }
 
+.page.dark .stat {
+  background: #0f172a;
+}
+
 .stat__value {
   font-size: 1.6rem;
   font-weight: 800;
@@ -277,6 +308,10 @@ main {
   border-radius: 14px;
   border: 1px solid var(--line);
   padding: 1rem;
+}
+
+.page.dark .panel__achievements {
+  background: #0f172a;
 }
 
 .achievements-title {
@@ -377,6 +412,11 @@ main {
   padding: 0.35rem 0.65rem;
   font-weight: 700;
   color: var(--muted);
+}
+
+.page.dark .ribbon span {
+  background: #0f172a;
+  color: var(--ink);
 }
 
 .card.project {
