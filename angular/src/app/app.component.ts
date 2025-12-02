@@ -23,15 +23,18 @@ interface AchievementItem {
   icon: string;
 }
 
-interface HeroStat {
-  label: string;
-  value: string;
-  hint: string;
+interface ExperienceItem {
+  period: string;
+  role: string;
+  company: string;
+  location: string;
+  detail: string;
 }
 
 interface Translation {
   nav: { about: string; projects: string; timeline: string; contact: string };
   skills: { title: string; subtitle: string; categories: { label: string; items: string[] }[] };
+  experience: { title: string; list: ExperienceItem[] };
   hero: {
     badge: string;
     title: string;
@@ -39,7 +42,6 @@ interface Translation {
     ctaPrimary: string;
     ctaSecondary: string;
   };
-  heroStats: HeroStat[];
   about: { title: string; description: string; formationTitle: string };
   formation: TimelineItem[];
   projects: { title: string; subtitle: string; list: ProjectItem[] };
@@ -55,7 +57,7 @@ interface Translation {
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  lang: LangKey = 'en'; // default English
+  lang: LangKey = 'en';
   theme: ThemeMode = 'light';
 
   translations: Record<LangKey, Translation> = {
@@ -63,48 +65,45 @@ export class AppComponent {
       nav: { about: 'Sobre', projects: 'Projetos', timeline: 'Trajetória', contact: 'Contacto' },
       skills: {
         title: 'Competências',
-        subtitle: 'Ferramentas e linguagens que uso e que cobri academicamente (INETE + ISTEC).',
+        subtitle: 'Ferramentas e linguagens que uso (INETE + ISTEC).',
         categories: [
           { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
-          { label: 'Web', items: ['HTML', 'CSS/SCSS', 'JavaScript', 'Angular', 'Performance'] },
-          { label: 'Académico', items: ['Java', 'C#', 'SQL', 'PHP', 'Sistemas / Redes', 'UX/Usabilidade'] },
-          { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Mobile UX', 'APIs'] },
+          { label: 'Backend / Web', items: ['C# (ASP.NET MVC)', 'SQL', 'HTML/CSS/SCSS', 'JavaScript', 'Angular'] },
+          { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Swift', 'React Native', 'Flutter'] },
+          { label: 'Académico', items: ['Java', 'C#', 'Python', 'MSSQL / NoSQL', 'Redes', 'UX/Usabilidade'] },
+        ],
+      },
+      experience: {
+        title: 'Experiência',
+        list: [
+          {
+            period: 'Mar-Jul 2023',
+            role: 'Software Developer · Estágio',
+            company: 'MediaLog Europa',
+            location: 'Lisboa, PT',
+            detail:
+              'C# + SQL; novos fluxos e melhorias; suporte multilingue para site ASP.NET MVC; workflow pull/merge/push.',
+          },
         ],
       },
       hero: {
         badge: 'Portfólio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Desenvolvo para Roblox: plugins de produtividade, sistemas em Luau e jogos com tração real. Também crio landing pages rápidas e claras. Freelancer desde 2023, entrego em PT/EN.',
+          'Dev de Roblox e backend: plugins de produtividade, sistemas em Luau e jogos com tração real. Também crio landing pages rápidas e claras. Freelancer desde 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'Ver projetos',
       },
-      heroStats: [
-        { label: 'Projetos entregues', value: '10+', hint: 'PT / EN' },
-        { label: 'Freelancer', value: 'Desde 2023', hint: 'ativo' },
-      ],
       about: {
         title: 'Sobre',
         description:
-          'Transformo ideias em produtos claros: plugins e sistemas em Luau, jogos com resultados reais e experiências web rápidas. Trabalho com clientes internacionais e mantenho uma linha do tempo transparente para mostrar evolução e entregas.',
+          'Transformo ideias em produtos claros: plugins e sistemas em Luau, jogos com resultados reais e experiências web rápidas. Formação técnica em TGPSI (INETE) e Dev Mobile (ISTEC, 2.º ano). Trabalho com clientes internacionais e mantenho uma linha do tempo transparente.',
         formationTitle: 'Formação',
       },
       formation: [
-        {
-          period: '2020-2023',
-          title: 'INETE · TGPSI',
-          detail: 'Gestão e Programação de Sistemas Informáticos (curso profissional)',
-        },
-        {
-          period: '2023',
-          title: 'Estágio curricular · MediaLog Europa',
-          detail: 'Estágio final do INETE, bases de desenvolvimento',
-        },
-        {
-          period: '2023-presente',
-          title: 'ISTEC · CTESP Dev Mobile',
-          detail: '2.º ano, foco em mobile e web',
-        },
+        { period: '2020-2023', title: 'INETE · TGPSI', detail: 'Gestão e Programação de Sistemas Informáticos' },
+        { period: '2023', title: 'Estágio curricular · MediaLog Europa', detail: 'Estágio final do INETE, bases de desenvolvimento' },
+        { period: '2023-presente', title: 'ISTEC · CTESP Dev Mobile', detail: '2.º ano, foco em mobile e web' },
       ],
       projects: {
         title: 'Projetos',
@@ -168,31 +167,40 @@ export class AppComponent {
         subtitle: 'Tools and languages I use daily and covered academically (INETE + ISTEC).',
         categories: [
           { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
-          { label: 'Web', items: ['HTML', 'CSS/SCSS', 'JavaScript', 'Angular', 'Performance'] },
-          { label: 'Academic', items: ['Java', 'C#', 'SQL', 'PHP', 'Systems / Networks', 'UX/Usability'] },
-          { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Mobile UX', 'APIs'] },
+          { label: 'Backend / Web', items: ['C# (ASP.NET MVC)', 'SQL', 'HTML/CSS/SCSS', 'JavaScript', 'Angular'] },
+          { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Swift', 'React Native', 'Flutter'] },
+          { label: 'Academic', items: ['Java', 'C#', 'Python', 'MSSQL / NoSQL', 'Networks', 'UX/Usability'] },
+        ],
+      },
+      experience: {
+        title: 'Experience',
+        list: [
+          {
+            period: 'Mar-Jul 2023',
+            role: 'Software Developer · Intern',
+            company: 'MediaLog Europa',
+            location: 'Lisbon, PT',
+            detail:
+              'C# + SQL; new flows and enhancements; multilingual support for ASP.NET MVC site; pull/merge/push workflow.',
+          },
         ],
       },
       hero: {
         badge: 'Portfolio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'I build for Roblox: productivity plugins, Luau systems, and games with real traction. I also ship fast, clean landing pages. Freelancing since 2023 (PT/EN).',
+          'Roblox and backend dev: productivity plugins, Luau systems, games with traction, plus fast, clean landing pages. Freelancing since 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'See projects',
       },
-      heroStats: [
-        { label: 'Shipped projects', value: '10+', hint: 'PT / EN' },
-        { label: 'Freelancer', value: 'Since 2023', hint: 'active' },
-      ],
       about: {
         title: 'About',
         description:
-          'I turn ideas into clear products: Luau plugins and systems, Roblox games with real traction, and fast web experiences. I work with international clients and keep a transparent timeline to show growth and deliveries.',
+          'I turn ideas into clear products: Luau plugins and systems, Roblox games with real traction, and fast web experiences. Training in TGPSI (INETE) and Dev Mobile (ISTEC, 2nd year). I work with international clients and keep a transparent timeline.',
         formationTitle: 'Education',
       },
       formation: [
-        { period: '2020-2023', title: 'INETE · TGPSI', detail: 'Vocational program in IT management & programming' },
+        { period: '2020-2023', title: 'INETE · TGPSI', detail: 'IT management & programming (vocational)' },
         { period: '2023', title: 'Curricular internship · MediaLog Europa', detail: 'Final INETE internship' },
         { period: '2023-present', title: 'ISTEC · CTESP Mobile Dev', detail: '2nd year, mobile & web' },
       ],
