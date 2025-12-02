@@ -62,7 +62,7 @@ export class AppComponent {
         subtitle: 'Ferramentas e linguagens que uso (INETE + ISTEC).',
         categories: [
           { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
-          { label: 'Backend / Web', items: ['C (bases INETE)', 'C# (ASP.NET MVC)', 'SQL', 'HTML/CSS/SCSS', 'JavaScript', 'Angular'] },
+          { label: 'Backend / Web', items: ['C (bases INETE)', 'C# (ASP.NET MVC)', 'HTML/CSS/SCSS', 'JavaScript', 'Angular', 'SQL'] },
           { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Swift', 'React Native', 'Flutter'] },
           { label: 'Académico', items: ['Java', 'C#', 'Python', 'MSSQL / NoSQL', 'Redes', 'UX/Usabilidade'] },
         ],
@@ -161,7 +161,7 @@ export class AppComponent {
         subtitle: 'Tools and languages I use daily and covered academically (INETE + ISTEC).',
         categories: [
           { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
-          { label: 'Backend / Web', items: ['C (foundations)', 'C# (ASP.NET MVC)', 'SQL', 'HTML/CSS/SCSS', 'JavaScript', 'Angular'] },
+          { label: 'Backend / Web', items: ['C (foundations)', 'C# (ASP.NET MVC)', 'HTML/CSS/SCSS', 'JavaScript', 'Angular', 'SQL'] },
           { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Swift', 'React Native', 'Flutter'] },
           { label: 'Academic', items: ['Java', 'C#', 'Python', 'MSSQL / NoSQL', 'Networks', 'UX/Usability'] },
         ],
