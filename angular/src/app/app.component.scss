@@ -199,6 +199,13 @@ main {
   border-color: var(--primary);
 }
 
+.page.dark .btn.ghost {
+  background: linear-gradient(120deg, #0ea5e9, #0066ff);
+  color: #fff;
+  border-color: #0ea5e9;
+  box-shadow: 0 10px 25px rgba(0, 102, 255, 0.35);
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
