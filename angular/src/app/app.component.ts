@@ -238,6 +238,6 @@ export class AppComponent {
     return new Date().getFullYear();
   }
 
-  linkedinLink = 'https://www.linkedin.com/in/pedroaleixo/';
+  linkedinLink = 'https://www.linkedin.com/in/pedro-aleixo-1ba4b8256/';
   githubLink = 'https://github.com/4leixo';
 }
