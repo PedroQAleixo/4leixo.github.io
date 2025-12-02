@@ -31,6 +31,7 @@ interface HeroStat {
 
 interface Translation {
   nav: { about: string; projects: string; timeline: string; contact: string };
+  skills: { title: string; subtitle: string; categories: { label: string; items: string[] }[] };
   hero: {
     badge: string;
     title: string;
@@ -59,17 +60,22 @@ export class AppComponent {
 
   translations: Record<LangKey, Translation> = {
     pt: {
-      nav: {
-        about: 'Sobre',
-        projects: 'Projetos',
-        timeline: 'Trajetória',
-        contact: 'Contacto',
+      nav: { about: 'Sobre', projects: 'Projetos', timeline: 'Trajetória', contact: 'Contacto' },
+      skills: {
+        title: 'Competências',
+        subtitle: 'Ferramentas e linguagens que uso e que cobri academicamente (INETE + ISTEC).',
+        categories: [
+          { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
+          { label: 'Web', items: ['HTML', 'CSS/SCSS', 'JavaScript', 'Angular', 'Performance'] },
+          { label: 'Académico', items: ['Java', 'C#', 'SQL', 'PHP', 'Sistemas / Redes', 'UX/Usabilidade'] },
+          { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Mobile UX', 'APIs'] },
+        ],
       },
       hero: {
         badge: 'Portfólio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Desenvolvo para Roblox e web: plugins e sistemas em Luau, jogos com tração real e landing pages rápidas. Freelancer desde 2023, entrego em PT/EN.',
+          'Desenvolvo para Roblox: plugins de produtividade, sistemas em Luau e jogos com tração real. Também crio landing pages rápidas e claras. Freelancer desde 2023, entrego em PT/EN.',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'Ver projetos',
       },
@@ -87,12 +93,12 @@ export class AppComponent {
         {
           period: '2020-2023',
           title: 'INETE · TGPSI',
-          detail: 'Curso profissional de Gestão e Programação de Sistemas Informáticos',
+          detail: 'Gestão e Programação de Sistemas Informáticos (curso profissional)',
         },
         {
           period: '2023',
           title: 'Estágio curricular · MediaLog Europa',
-          detail: 'Estágio final do curso INETE, bases de desenvolvimento',
+          detail: 'Estágio final do INETE, bases de desenvolvimento',
         },
         {
           period: '2023-presente',
@@ -156,17 +162,22 @@ export class AppComponent {
       },
     },
     en: {
-      nav: {
-        about: 'About',
-        projects: 'Projects',
-        timeline: 'Timeline',
-        contact: 'Contact',
+      nav: { about: 'About', projects: 'Projects', timeline: 'Timeline', contact: 'Contact' },
+      skills: {
+        title: 'Skills',
+        subtitle: 'Tools and languages I use daily and covered academically (INETE + ISTEC).',
+        categories: [
+          { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
+          { label: 'Web', items: ['HTML', 'CSS/SCSS', 'JavaScript', 'Angular', 'Performance'] },
+          { label: 'Academic', items: ['Java', 'C#', 'SQL', 'PHP', 'Systems / Networks', 'UX/Usability'] },
+          { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Mobile UX', 'APIs'] },
+        ],
       },
       hero: {
         badge: 'Portfolio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Building Roblox and web experiences: Studio plugins, bespoke Luau systems, games with traction, and clean landing pages. Freelancing since 2023 (PT/EN).',
+          'I build for Roblox: productivity plugins, Luau systems, and games with real traction. I also ship fast, clean landing pages. Freelancing since 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'See projects',
       },
@@ -182,11 +193,7 @@ export class AppComponent {
       },
       formation: [
         { period: '2020-2023', title: 'INETE · TGPSI', detail: 'Vocational program in IT management & programming' },
-        {
-          period: '2023',
-          title: 'Curricular internship · MediaLog Europa',
-          detail: 'Final INETE internship, development fundamentals',
-        },
+        { period: '2023', title: 'Curricular internship · MediaLog Europa', detail: 'Final INETE internship' },
         { period: '2023-present', title: 'ISTEC · CTESP Mobile Dev', detail: '2nd year, mobile & web' },
       ],
       projects: {

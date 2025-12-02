@@ -8,14 +8,14 @@
 }
 
 .page.dark {
-  --bg: #0b1220;
+  --bg: #0f172a;
   --card: #111827;
   --ink: #e5e7eb;
   --muted: #9ca3af;
   --line: #1f2937;
-  background: radial-gradient(120% 120% at 20% 20%, rgba(0, 188, 212, 0.12), transparent),
-    radial-gradient(100% 120% at 80% 0%, rgba(0, 102, 255, 0.1), transparent),
-    #0b1220;
+  background: radial-gradient(140% 140% at 15% 15%, rgba(0, 188, 212, 0.12), transparent),
+    radial-gradient(120% 140% at 85% 10%, rgba(255, 122, 0, 0.08), transparent),
+    #0f172a;
 }
 
 .topbar {
@@ -252,20 +252,6 @@ main {
   box-shadow: var(--glow);
   position: relative;
   overflow: hidden;
-}
-
-.panel::after {
-  content: '';
-  position: absolute;
-  inset: -20% -20%;
-  background: radial-gradient(40% 40% at 20% 20%, rgba(0, 188, 212, 0.18), transparent),
-    radial-gradient(40% 40% at 80% 0%, rgba(255, 122, 0, 0.15), transparent);
-  z-index: 0;
-}
-
-.panel > * {
-  position: relative;
-  z-index: 1;
 }
 
 .panel__row {
@@ -507,6 +493,19 @@ main {
   border-radius: 14px;
   padding: 0.8rem 1rem;
   border: 1px solid var(--line);
+}
+
+.skill-card h4 {
+  margin: 0 0 0.35rem;
+}
+
+.skill-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.25rem;
+  list-style: disc;
 }
 
 .timeline-item .period {
