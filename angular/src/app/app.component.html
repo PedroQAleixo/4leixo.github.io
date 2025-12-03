@@ -4,7 +4,7 @@
       <span class="spark"></span>
       <div class="brand-text">
         <div class="brand-name">Pedro Aleixo</div>
-        <div class="brand-tag">Dev · 2020-{{ currentYear }}</div>
+        <div class="brand-tag">Dev 2020-{{ currentYear }}</div>
       </div>
     </div>
     <nav class="nav">
@@ -62,10 +62,10 @@
             </div>
           </div>
         </article>
-        <article class="card soft">
+        <article class="card flat">
           <h3>{{ t.projects.title }}</h3>
           <ul class="summary-list">
-            <li *ngFor="let project of t.projects.list | slice : 0 : 3">{{ project.title }} — {{ project.role }}</li>
+            <li *ngFor="let project of t.projects.list | slice : 0 : 3">{{ project.title }} - {{ project.role }}</li>
           </ul>
         </article>
       </div>
@@ -97,7 +97,7 @@
           <div class="experience-top">
             <div class="period">{{ item.period }}</div>
             <div class="role">{{ item.role }}</div>
-            <div class="company">{{ item.company }} · {{ item.location }}</div>
+            <div class="company">{{ item.company }} - {{ item.location }}</div>
           </div>
           <p class="muted">{{ item.detail }}</p>
         </article>

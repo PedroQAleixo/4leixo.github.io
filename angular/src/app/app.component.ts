@@ -52,30 +52,29 @@ interface Translation {
 })
 export class AppComponent {
   lang: LangKey = 'en';
-  theme: ThemeMode = 'dark'; // start in dark mode by default
+  theme: ThemeMode = 'dark'; // default dark
 
   translations: Record<LangKey, Translation> = {
     pt: {
-      nav: { about: 'Sobre', projects: 'Projetos', timeline: 'Trajetória', contact: 'Contacto' },
+      nav: { about: 'Sobre', projects: 'Projetos', timeline: 'Trajetoria', contact: 'Contacto' },
       skills: {
-        title: 'Competências',
-        subtitle: 'O que uso em projetos e o que cobri academicamente (INETE + ISTEC).',
+        title: 'Competencias',
+        subtitle: 'Pratica (projetos) e academico (INETE + ISTEC).',
         categories: [
           {
-            label: 'Prática',
+            label: 'Pratica',
             items: [
               'Luau / Roblox Studio',
               'Plugins e sistemas Roblox',
               'C# (ASP.NET MVC)',
               'HTML / CSS / SCSS',
               'JavaScript',
-              'Angular',
               'SQL',
               'Landing pages',
             ],
           },
           {
-            label: 'Académico',
+            label: 'Academico',
             items: [
               'C (bases INETE)',
               'Java',
@@ -87,16 +86,17 @@ export class AppComponent {
               'MSSQL / NoSQL',
               'Redes',
               'UX / Usabilidade',
+              'Angular (aulas)',
             ],
           },
         ],
       },
       experience: {
-        title: 'Experiência',
+        title: 'Experiencia',
         list: [
           {
             period: 'Mar-Jul 2023',
-            role: 'Software Developer · Estágio',
+            role: 'Software Developer - Estagio',
             company: 'MediaLog Europa',
             location: 'Lisboa, PT',
             detail:
@@ -104,39 +104,39 @@ export class AppComponent {
           },
           {
             period: '2023-presente',
-            role: 'Freelancer · Roblox Dev',
+            role: 'Freelancer - Roblox Dev',
             company: 'Clientes internacionais',
             location: 'Remoto',
-            detail: 'Scripts, plugins e sistemas em Luau/Roblox; jogos com tração real e UI/UX in-game.',
+            detail: 'Scripts, plugins e sistemas em Luau/Roblox; jogos com tracao real e UI/UX in-game.',
           },
         ],
       },
       hero: {
-        badge: 'Portfólio 2020-2025',
+        badge: 'Portfolio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Dev de Roblox e backend: plugins e sistemas em Luau, jogos com tração real e landing pages rápidas. Freelancer desde 2023 (PT/EN).',
+          'Dev de Roblox e backend: plugins e sistemas em Luau, jogos com tracao real e landing pages rapidas. Freelancer desde 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'Ver projetos',
       },
       about: {
         title: 'Sobre',
         description:
-          'Transformo ideias em produtos claros: plugins e sistemas em Luau, jogos com resultados reais e experiências web rápidas. Formação técnica em TGPSI (INETE) e Dev Mobile (ISTEC, 2.º ano).',
-        formationTitle: 'Formação',
+          'Transformo ideias em produtos claros: plugins e sistemas em Luau, jogos com resultados reais e experiencias web rapidas. Formacao tecnica em TGPSI (INETE) e Dev Mobile (ISTEC, 2.º ano).',
+        formationTitle: 'Formacao',
       },
       formation: [
-        { period: '2020-2023', title: 'INETE · TGPSI', detail: 'Gestão e Programação de Sistemas Informáticos' },
-        { period: '2023', title: 'Estágio curricular · MediaLog Europa', detail: 'Estágio final do INETE, bases de desenvolvimento' },
-        { period: '2023-presente', title: 'ISTEC · CTESP Dev Mobile', detail: '2.º ano, foco em mobile e web' },
+        { period: '2020-2023', title: 'INETE - TGPSI', detail: 'Gestao e Programacao de Sistemas Informaticos' },
+        { period: '2023', title: 'Estagio curricular - MediaLog Europa', detail: 'Estagio final do INETE, bases de desenvolvimento' },
+        { period: '2023-presente', title: 'ISTEC - CTESP Dev Mobile', detail: '2.º ano, foco em mobile e web' },
       ],
       projects: {
         title: 'Projetos',
-        subtitle: 'Plugins, sistemas e jogos para Roblox — e um site real em produção.',
+        subtitle: 'Plugins, sistemas e jogos para Roblox — e um site real em producao.',
         list: [
           {
             title: 'Plugins Roblox Studio',
-            role: 'Tooling · Automação',
+            role: 'Tooling - Automacao',
             stack: ['Luau', 'Roblox Studio', 'UX de ferramenta'],
             highlight: 'Plugins para acelerar fluxos no Studio e padronizar entregas.',
           },
@@ -144,7 +144,7 @@ export class AppComponent {
             title: 'Sistemas & Scripts Roblox',
             role: 'Freelancer',
             stack: ['Luau', 'UI scripting', 'Backend in-game'],
-            highlight: 'Soluções sob medida desde 2023 para clientes internacionais.',
+            highlight: 'Solucoes sob medida desde 2023 para clientes internacionais.',
           },
           {
             title: 'Jogos Roblox',
@@ -157,31 +157,31 @@ export class AppComponent {
             role: 'Website real entregue',
             link: 'https://barryjamesgoodman.com',
             stack: ['Web', 'Performance', 'SEO'],
-            highlight: 'Landing institucional rápida, publicada e mantida.',
+            highlight: 'Landing institucional rapida, publicada e mantida.',
           },
         ],
       },
       achievements: {
         title: 'Conquistas Roblox',
         list: [
-          { title: 'Coroa de 100 jogadores', detail: '100 visitantes únicos', icon: '👑' },
-          { title: 'Coroa de 1.000 jogadores', detail: '1.000 visitantes únicos', icon: '👑' },
+          { title: 'Coroa de 100 jogadores', detail: '100 visitantes unicos', icon: '👑' },
+          { title: 'Coroa de 1.000 jogadores', detail: '1.000 visitantes unicos', icon: '👑' },
           { title: 'Achievement Medal', detail: 'Evento oficial Roblox', icon: '🏅' },
           { title: '+10.000 visitas totais', detail: 'Jogos publicados', icon: '📈' },
         ],
       },
       timeline: {
-        title: 'Trajetória',
+        title: 'Trajetoria',
         list: [
           { period: '2020-2023', title: 'INETE', detail: 'Curso TGPSI' },
-          { period: '2023', title: 'Estágio', detail: 'MediaLog Europa (curricular INETE)' },
-          { period: '2023-presente', title: 'ISTEC', detail: 'CTESP · Dev Mobile (2.º ano)' },
+          { period: '2023', title: 'Estagio', detail: 'MediaLog Europa (curricular INETE)' },
+          { period: '2023-presente', title: 'ISTEC', detail: 'CTESP - Dev Mobile (2.º ano)' },
           { period: '2023-presente', title: 'Freelancer', detail: 'Scripts, plugins e sistemas em Luau' },
         ],
       },
       contact: {
         title: 'Contacto',
-        subtitle: 'Disponível para colaborações, projetos e consultoria.',
+        subtitle: 'Disponivel para colaborações, projetos e consultoria.',
         linkedinCta: 'LinkedIn',
       },
     },
@@ -199,7 +199,6 @@ export class AppComponent {
               'C# (ASP.NET MVC)',
               'HTML / CSS / SCSS',
               'JavaScript',
-              'Angular',
               'SQL',
               'Landing pages',
             ],
@@ -217,6 +216,7 @@ export class AppComponent {
               'MSSQL / NoSQL',
               'Networks',
               'UX / Usability',
+              'Angular (classes)',
             ],
           },
         ],
@@ -226,7 +226,7 @@ export class AppComponent {
         list: [
           {
             period: 'Mar-Jul 2023',
-            role: 'Software Developer · Intern',
+            role: 'Software Developer - Intern',
             company: 'MediaLog Europa',
             location: 'Lisbon, PT',
             detail:
@@ -234,10 +234,10 @@ export class AppComponent {
           },
           {
             period: '2023-present',
-            role: 'Freelancer · Roblox Dev',
+            role: 'Freelancer - Roblox Dev',
             company: 'International clients',
             location: 'Remote',
-            detail: 'Scripts, plugins, and systems in Luau/Roblox; games with real traction and in-game UI/UX.',
+            detail: 'Scripts, plugins, and systems in Luau/Roblox; games with traction and in-game UI/UX.',
           },
         ],
       },
@@ -245,7 +245,7 @@ export class AppComponent {
         badge: 'Portfolio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Roblox and backend dev: productivity plugins, Luau systems, games with traction, plus fast, clean landing pages. Freelancing since 2023 (PT/EN).',
+          'Roblox and backend dev: plugins and systems in Luau, games with traction, plus fast, clean landing pages. Freelancing since 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'See projects',
       },
@@ -256,9 +256,9 @@ export class AppComponent {
         formationTitle: 'Education',
       },
       formation: [
-        { period: '2020-2023', title: 'INETE · TGPSI', detail: 'IT management & programming (vocational)' },
-        { period: '2023', title: 'Curricular internship · MediaLog Europa', detail: 'Final INETE internship' },
-        { period: '2023-present', title: 'ISTEC · CTESP Mobile Dev', detail: '2nd year, mobile & web' },
+        { period: '2020-2023', title: 'INETE - TGPSI', detail: 'IT management & programming (vocational)' },
+        { period: '2023', title: 'Curricular internship - MediaLog Europa', detail: 'Final INETE internship' },
+        { period: '2023-present', title: 'ISTEC - CTESP Mobile Dev', detail: '2nd year, mobile & web' },
       ],
       projects: {
         title: 'Projects',
@@ -266,7 +266,7 @@ export class AppComponent {
         list: [
           {
             title: 'Roblox Studio Plugins',
-            role: 'Tooling · Automation',
+            role: 'Tooling - Automation',
             stack: ['Luau', 'Roblox Studio', 'Tool UX'],
             highlight: 'Plugins to speed up Studio workflows and standardize delivery.',
           },
@@ -305,7 +305,7 @@ export class AppComponent {
         list: [
           { period: '2020-2023', title: 'INETE', detail: 'TGPSI studies' },
           { period: '2023', title: 'Internship', detail: 'MediaLog Europa (curricular INETE)' },
-          { period: '2023-present', title: 'ISTEC', detail: 'CTESP · Mobile Dev (2nd year)' },
+          { period: '2023-present', title: 'ISTEC', detail: 'CTESP - Mobile Dev (2nd year)' },
           { period: '2023-present', title: 'Freelancer', detail: 'Scripts, plugins, and systems in Luau' },
         ],
       },

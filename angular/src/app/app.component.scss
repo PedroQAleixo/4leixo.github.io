@@ -341,6 +341,9 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 
 .card-top {
