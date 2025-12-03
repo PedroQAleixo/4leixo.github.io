@@ -57,22 +57,32 @@
             <div class="about-line">
               <span class="dot"></span>
               <div>
-                <strong>Focus</strong>
-                <div class="muted">Roblox dev, backend C#, landing pages rápidas.</div>
+                <strong>{{ lang === 'pt' ? 'Foco' : 'Focus' }}</strong>
+                <div class="muted">
+                  {{ lang === 'pt'
+                    ? 'Dev Roblox, backend C#, landing pages rápidas.'
+                    : 'Roblox dev, backend C#, fast landing pages.' }}
+                </div>
               </div>
             </div>
             <div class="about-line">
               <span class="dot"></span>
               <div>
-                <strong>Formação</strong>
-                <div class="muted">TGPSI (INETE) · Dev Mobile (ISTEC, 2.º ano).</div>
+                <strong>{{ t.about.formationTitle }}</strong>
+                <div class="muted">
+                  {{ lang === 'pt'
+                    ? 'TGPSI (INETE) · Dev Mobile (ISTEC, 2.º ano).'
+                    : 'TGPSI (INETE) · Dev Mobile (ISTEC, 2nd year).' }}
+                </div>
               </div>
             </div>
             <div class="about-line">
               <span class="dot"></span>
               <div>
-                <strong>Freelancer</strong>
-                <div class="muted">Desde 2023 · PT / EN.</div>
+                <strong>{{ lang === 'pt' ? 'Freelancer' : 'Freelancer' }}</strong>
+                <div class="muted">
+                  {{ lang === 'pt' ? 'Desde 2023 · PT / EN.' : 'Since 2023 · PT / EN.' }}
+                </div>
               </div>
             </div>
           </div>
