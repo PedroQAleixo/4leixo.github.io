@@ -52,19 +52,43 @@ interface Translation {
 })
 export class AppComponent {
   lang: LangKey = 'en';
-  theme: ThemeMode = 'light';
+  theme: ThemeMode = 'dark'; // start in dark mode by default
 
   translations: Record<LangKey, Translation> = {
     pt: {
       nav: { about: 'Sobre', projects: 'Projetos', timeline: 'Trajetória', contact: 'Contacto' },
       skills: {
         title: 'Competências',
-        subtitle: 'Ferramentas e linguagens que uso (INETE + ISTEC).',
+        subtitle: 'O que uso em projetos e o que cobri academicamente (INETE + ISTEC).',
         categories: [
-          { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
-          { label: 'Backend / Web', items: ['C (bases INETE)', 'C# (ASP.NET MVC)', 'HTML/CSS/SCSS', 'JavaScript', 'Angular', 'SQL'] },
-          { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Swift', 'React Native', 'Flutter'] },
-          { label: 'Académico', items: ['Java', 'C#', 'Python', 'MSSQL / NoSQL', 'Redes', 'UX/Usabilidade'] },
+          {
+            label: 'Prática',
+            items: [
+              'Luau / Roblox Studio',
+              'Plugins e sistemas Roblox',
+              'C# (ASP.NET MVC)',
+              'HTML / CSS / SCSS',
+              'JavaScript',
+              'Angular',
+              'SQL',
+              'Landing pages',
+            ],
+          },
+          {
+            label: 'Académico',
+            items: [
+              'C (bases INETE)',
+              'Java',
+              'Kotlin',
+              'Swift',
+              'React Native',
+              'Flutter',
+              'Python',
+              'MSSQL / NoSQL',
+              'Redes',
+              'UX / Usabilidade',
+            ],
+          },
         ],
       },
       experience: {
@@ -78,13 +102,20 @@ export class AppComponent {
             detail:
               'C# + SQL; novos fluxos e melhorias em app; suporte multilingue em site ASP.NET MVC; workflow pull/merge/push.',
           },
+          {
+            period: '2023-presente',
+            role: 'Freelancer · Roblox Dev',
+            company: 'Clientes internacionais',
+            location: 'Remoto',
+            detail: 'Scripts, plugins e sistemas em Luau/Roblox; jogos com tração real e UI/UX in-game.',
+          },
         ],
       },
       hero: {
         badge: 'Portfólio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Dev de Roblox e backend: plugins, sistemas em Luau e jogos com tração real. Também crio landing pages rápidas e claras. Freelancer desde 2023 (PT/EN).',
+          'Dev de Roblox e backend: plugins e sistemas em Luau, jogos com tração real e landing pages rápidas. Freelancer desde 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'Ver projetos',
       },
@@ -158,12 +189,36 @@ export class AppComponent {
       nav: { about: 'About', projects: 'Projects', timeline: 'Timeline', contact: 'Contact' },
       skills: {
         title: 'Skills',
-        subtitle: 'Tools and languages I use daily and covered academically (INETE + ISTEC).',
+        subtitle: 'What I use in projects and what I covered academically (INETE + ISTEC).',
         categories: [
-          { label: 'Roblox', items: ['Luau', 'Roblox Studio', 'Plugins', 'Gameplay', 'UI scripting'] },
-          { label: 'Backend / Web', items: ['C (foundations)', 'C# (ASP.NET MVC)', 'HTML/CSS/SCSS', 'JavaScript', 'Angular', 'SQL'] },
-          { label: 'Mobile (ISTEC)', items: ['Android (Java/Kotlin)', 'Swift', 'React Native', 'Flutter'] },
-          { label: 'Academic', items: ['Java', 'C#', 'Python', 'MSSQL / NoSQL', 'Networks', 'UX/Usability'] },
+          {
+            label: 'Practical',
+            items: [
+              'Luau / Roblox Studio',
+              'Roblox plugins & systems',
+              'C# (ASP.NET MVC)',
+              'HTML / CSS / SCSS',
+              'JavaScript',
+              'Angular',
+              'SQL',
+              'Landing pages',
+            ],
+          },
+          {
+            label: 'Academic',
+            items: [
+              'C (foundations)',
+              'Java',
+              'Kotlin',
+              'Swift',
+              'React Native',
+              'Flutter',
+              'Python',
+              'MSSQL / NoSQL',
+              'Networks',
+              'UX / Usability',
+            ],
+          },
         ],
       },
       experience: {
@@ -176,6 +231,13 @@ export class AppComponent {
             location: 'Lisbon, PT',
             detail:
               'C# + SQL; new flows and enhancements; multilingual support for ASP.NET MVC site; pull/merge/push workflow.',
+          },
+          {
+            period: '2023-present',
+            role: 'Freelancer · Roblox Dev',
+            company: 'International clients',
+            location: 'Remote',
+            detail: 'Scripts, plugins, and systems in Luau/Roblox; games with real traction and in-game UI/UX.',
           },
         ],
       },
