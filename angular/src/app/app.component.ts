@@ -56,7 +56,7 @@ export class AppComponent {
 
   translations: Record<LangKey, Translation> = {
     pt: {
-      nav: { about: 'Sobre', projects: 'Projetos', timeline: 'Trajetoria', contact: 'Contacto' },
+      nav: { about: 'Sobre mim', projects: 'Projetos', timeline: 'Trajetoria', contact: 'Contacto' },
       skills: {
         title: 'Competencias',
         subtitle: 'Pratica (projetos) e academico (INETE + ISTEC).',
@@ -186,7 +186,7 @@ export class AppComponent {
       },
     },
     en: {
-      nav: { about: 'About', projects: 'Projects', timeline: 'Timeline', contact: 'Contact' },
+      nav: { about: 'About me', projects: 'Projects', timeline: 'Timeline', contact: 'Contact' },
       skills: {
         title: 'Skills',
         subtitle: 'What I use in projects and what I covered academically (INETE + ISTEC).',
