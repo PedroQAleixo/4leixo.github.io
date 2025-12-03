@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 
 type LangKey = 'pt' | 'en';
 type ThemeMode = 'light' | 'dark';
@@ -56,13 +56,13 @@ export class AppComponent {
 
   translations: Record<LangKey, Translation> = {
     pt: {
-      nav: { about: 'Sobre mim', projects: 'Projetos', timeline: 'Trajetoria', contact: 'Contacto' },
+      nav: { about: 'Sobre mim', projects: 'Projetos', timeline: 'Trajetória', contact: 'Contacto' },
       skills: {
-        title: 'Competencias',
-        subtitle: 'Pratica (projetos) e academico (INETE + ISTEC).',
+        title: 'Competências',
+        subtitle: 'Prática (projetos) e académico (INETE + ISTEC).',
         categories: [
           {
-            label: 'Pratica',
+            label: 'Prática',
             items: [
               'Luau / Roblox Studio',
               'Plugins e sistemas Roblox',
@@ -74,7 +74,7 @@ export class AppComponent {
             ],
           },
           {
-            label: 'Academico',
+            label: 'Académico',
             items: [
               'C (bases INETE)',
               'Java',
@@ -93,22 +93,22 @@ export class AppComponent {
         ],
       },
       experience: {
-        title: 'Experiencia',
+        title: 'Experiência',
         list: [
           {
             period: 'Mar-Jul 2023',
-            role: 'Software Developer - Estagio',
+            role: 'Software Developer - Estágio',
             company: 'MediaLog Europa',
             location: 'Lisboa, PT',
             detail:
-              'C# + SQL; novos fluxos e melhorias em app; suporte multilingue em site ASP.NET MVC; workflow pull/merge/push.',
+              'C# + SQL; novos fluxos e melhorias na aplicação; suporte multilingue em site ASP.NET MVC; workflow pull/merge/push.',
           },
           {
             period: '2023-presente',
             role: 'Freelancer - Roblox Dev',
             company: 'Clientes internacionais',
             location: 'Remoto',
-            detail: 'Scripts, plugins e sistemas em Luau/Roblox; jogos com tracao real e UI/UX in-game.',
+            detail: 'Scripts, plugins e sistemas em Luau/Roblox; jogos com tração real e UI/UX in-game.',
           },
         ],
       },
@@ -116,28 +116,28 @@ export class AppComponent {
         badge: 'Portfolio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Dev de Roblox e backend: plugins e sistemas em Luau, jogos com tracao real e landing pages rapidas. Freelancer desde 2023 (PT/EN).',
+          'Dev de Roblox e backend: plugins e sistemas em Luau, jogos com tração real e landing pages rápidas. Freelancer desde 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'Ver projetos',
       },
       about: {
-        title: 'Sobre',
+        title: 'Sobre mim',
         description:
-          'Transformo ideias em produtos claros: plugins e sistemas em Luau, jogos com resultados reais e experiencias web rapidas. Formacao tecnica em TGPSI (INETE) e Dev Mobile (ISTEC, 2.º ano).',
-        formationTitle: 'Formacao',
+          'Transformo ideias em produtos claros: plugins e sistemas em Luau, jogos com resultados reais e experiências web rápidas. Formação técnica em TGPSI (INETE) e Dev Mobile (ISTEC, 2.º ano).',
+        formationTitle: 'Formação',
       },
       formation: [
-        { period: '2020-2023', title: 'INETE - TGPSI', detail: 'Gestao e Programacao de Sistemas Informaticos' },
-        { period: '2023', title: 'Estagio curricular - MediaLog Europa', detail: 'Estagio final do INETE, bases de desenvolvimento' },
+        { period: '2020-2023', title: 'INETE - TGPSI', detail: 'Gestão e Programação de Sistemas Informáticos' },
+        { period: '2023', title: 'Estágio curricular - MediaLog Europa', detail: 'Estágio final do INETE, bases de desenvolvimento' },
         { period: '2023-presente', title: 'ISTEC - CTESP Dev Mobile', detail: '2.º ano, foco em mobile e web' },
       ],
       projects: {
         title: 'Projetos',
-        subtitle: 'Plugins, sistemas e jogos para Roblox — e um site real em producao.',
+        subtitle: 'Plugins, sistemas e jogos para Roblox — e um site real em produção.',
         list: [
           {
             title: 'Plugins Roblox Studio',
-            role: 'Tooling - Automacao',
+            role: 'Tooling · Automação',
             stack: ['Luau', 'Roblox Studio', 'UX de ferramenta'],
             highlight: 'Plugins para acelerar fluxos no Studio e padronizar entregas.',
           },
@@ -145,7 +145,7 @@ export class AppComponent {
             title: 'Sistemas & Scripts Roblox',
             role: 'Freelancer',
             stack: ['Luau', 'UI scripting', 'Backend in-game'],
-            highlight: 'Solucoes sob medida desde 2023 para clientes internacionais.',
+            highlight: 'Soluções à medida desde 2023 para clientes internacionais.',
           },
           {
             title: 'Jogos Roblox',
@@ -155,34 +155,34 @@ export class AppComponent {
           },
           {
             title: 'barryjamesgoodman.com',
-            role: 'Website real entregue',
+            role: 'Website entregue',
             link: 'https://barryjamesgoodman.com',
             stack: ['Web', 'Performance', 'SEO'],
-            highlight: 'Landing institucional rapida, publicada e mantida.',
+            highlight: 'Landing institucional rápida, publicada e mantida.',
           },
         ],
       },
       achievements: {
         title: 'Conquistas Roblox',
         list: [
-          { title: 'Coroa de 100 jogadores', detail: '100 visitantes unicos', icon: '👑' },
-          { title: 'Coroa de 1.000 jogadores', detail: '1.000 visitantes unicos', icon: '👑' },
-          { title: 'Achievement Medal', detail: 'Evento oficial Roblox', icon: '🏅' },
+          { title: 'Coroa de 100 jogadores', detail: '100 visitantes únicos', icon: '👑' },
+          { title: 'Coroa de 1.000 jogadores', detail: '1.000 visitantes únicos', icon: '👑' },
+          { title: 'Medalha Achievement', detail: 'Evento oficial Roblox', icon: '🎖️' },
           { title: '+10.000 visitas totais', detail: 'Jogos publicados', icon: '📈' },
         ],
       },
       timeline: {
-        title: 'Trajetoria',
+        title: 'Trajetória',
         list: [
           { period: '2020-2023', title: 'INETE', detail: 'Curso TGPSI' },
-          { period: '2023', title: 'Estagio', detail: 'MediaLog Europa (curricular INETE)' },
+          { period: '2023', title: 'Estágio', detail: 'MediaLog Europa (curricular INETE)' },
           { period: '2023-presente', title: 'ISTEC', detail: 'CTESP - Dev Mobile (2.º ano)' },
           { period: '2023-presente', title: 'Freelancer', detail: 'Scripts, plugins e sistemas em Luau' },
         ],
       },
       contact: {
         title: 'Contacto',
-        subtitle: 'Disponivel para colaborações, projetos e consultoria.',
+        subtitle: 'Disponível para colaborações, projetos e consultoria.',
         linkedinCta: 'LinkedIn',
       },
     },
@@ -247,12 +247,12 @@ export class AppComponent {
         badge: 'Portfolio 2020-2025',
         title: 'Pedro Aleixo',
         subtitle:
-          'Roblox and backend dev: plugins and systems in Luau, games with traction, plus fast, clean landing pages. Freelancing since 2023 (PT/EN).',
+          'Roblox and backend dev: productivity plugins, Luau systems, games with traction, plus fast, clean landing pages. Freelancing since 2023 (PT/EN).',
         ctaPrimary: 'LinkedIn',
         ctaSecondary: 'See projects',
       },
       about: {
-        title: 'About',
+        title: 'About me',
         description:
           'I turn ideas into clear products: Luau plugins and systems, Roblox games with real traction, and fast web experiences. Training in TGPSI (INETE) and Dev Mobile (ISTEC, 2nd year).',
         formationTitle: 'Education',
@@ -298,7 +298,7 @@ export class AppComponent {
         list: [
           { title: '100-player Crown', detail: '100 unique visitors', icon: '👑' },
           { title: '1,000-player Crown', detail: '1,000 unique visitors', icon: '👑' },
-          { title: 'Achievement Medal', detail: 'Official Roblox event', icon: '🏅' },
+          { title: 'Achievement Medal', detail: 'Official Roblox event', icon: '🎖️' },
           { title: '10,000+ total visits', detail: 'Across published games', icon: '📈' },
         ],
       },

@@ -1,4 +1,4 @@
-<div class="page" [class.dark]="theme === 'dark'">
+﻿<div class="page" [class.dark]="theme === 'dark'">
   <header class="topbar">
     <div class="brand">
       <span class="spark"></span>
@@ -49,16 +49,51 @@
       <div class="section-head">
         <div class="pill">{{ t.about.title }}</div>
         <h2>{{ t.about.title }}</h2>
-        <p>{{ t.about.description }}</p>
       </div>
-      <div class="grid two">
-        <article class="card focus">
-          <h3>{{ t.about.formationTitle }}</h3>
-          <div class="mini-timeline">
-            <div class="mini-item" *ngFor="let item of t.formation">
-              <div class="mini-period">{{ item.period }}</div>
-              <div class="mini-title">{{ item.title }}</div>
-              <div class="mini-detail">{{ item.detail }}</div>
+      <div class="grid about-grid">
+        <article class="card about-card">
+          <p class="lead">{{ t.about.description }}</p>
+          <div class="about-lines">
+            <div class="about-line">
+              <span class="dot"></span>
+              <div>
+                <strong>Focus</strong>
+                <div class="muted">Roblox dev, backend C#, landing pages rápidas.</div>
+              </div>
+            </div>
+            <div class="about-line">
+              <span class="dot"></span>
+              <div>
+                <strong>Formação</strong>
+                <div class="muted">TGPSI (INETE) · Dev Mobile (ISTEC, 2.º ano).</div>
+              </div>
+            </div>
+            <div class="about-line">
+              <span class="dot"></span>
+              <div>
+                <strong>Freelancer</strong>
+                <div class="muted">Desde 2023 · PT / EN.</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card edu-card">
+          <div class="edu-head">
+            <div class="pill small">{{ t.about.formationTitle }}</div>
+            <h3>{{ t.about.formationTitle }}</h3>
+          </div>
+          <div class="edu-list">
+            <div class="edu-item" *ngFor="let item of t.formation">
+              <div class="edu-left">
+                <div class="edu-dot"></div>
+                <div class="edu-line"></div>
+              </div>
+              <div class="edu-content">
+                <div class="edu-period">{{ item.period }}</div>
+                <div class="edu-title">{{ item.title }}</div>
+                <div class="edu-detail">{{ item.detail }}</div>
+              </div>
             </div>
           </div>
         </article>
@@ -74,7 +109,7 @@
       <div class="grid four">
         <article class="card skill-card" *ngFor="let cat of t.skills.categories">
           <h4>{{ cat.label }}</h4>
-          <ul class="skill-list">
+          <ul class="skill-list" [ngClass]="{'two-col': cat.label === 'Académico' || cat.label === 'Academic'}">
             <li *ngFor="let item of cat.items">{{ item }}</li>
           </ul>
         </article>

@@ -276,6 +276,12 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
+.about-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: stretch;
+}
+
+
 .grid.three {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
@@ -302,8 +308,25 @@ main {
   background: linear-gradient(160deg, #ffffff, #f7fbff);
 }
 
+.page.dark .card.focus {
+  background: #0f172a;
+  border-color: #1f2937;
+}
+
 .card.soft {
   background: #fffdf9;
+}
+
+.card.project {
+  background: linear-gradient(180deg, #ffffff, #f7f9fc);
+  border-color: #e5e7eb;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+}
+
+.page.dark .card.project {
+  background: #0f172a;
+  border-color: #1f2937;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.45);
 }
 
 .summary-list {
@@ -335,15 +358,6 @@ main {
 .page.dark .ribbon span {
   background: #0f172a;
   color: var(--ink);
-}
-
-.card.project {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
 }
 
 .card-top {
@@ -447,6 +461,17 @@ main {
   display: grid;
   gap: 0.25rem;
   list-style: disc;
+}
+
+.skill-list.two-col {
+  columns: 2;
+  column-gap: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .skill-list.two-col {
+    columns: 1;
+  }
 }
 
 .experience-card .period {
