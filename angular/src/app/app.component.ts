@@ -42,7 +42,6 @@ interface Translation {
   timeline: { title: string; list: TimelineItem[] };
   contact: { title: string; subtitle: string; linkedinCta: string };
 }
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
