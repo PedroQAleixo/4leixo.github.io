@@ -39,7 +39,6 @@ interface Translation {
   about: { title: string; description: string; formationTitle: string };
   formation: TimelineItem[];
   projects: { title: string; subtitle: string; list: ProjectItem[] };
-  achievements: { title: string; list: AchievementItem[] };
   timeline: { title: string; list: TimelineItem[] };
   contact: { title: string; subtitle: string; linkedinCta: string };
 }
@@ -162,15 +161,6 @@ export class AppComponent {
           },
         ],
       },
-      achievements: {
-        title: 'Conquistas Roblox',
-        list: [
-          { title: 'Coroa de 100 jogadores', detail: '100 visitantes únicos', icon: '👑' },
-          { title: 'Coroa de 1.000 jogadores', detail: '1.000 visitantes únicos', icon: '👑' },
-          { title: 'Medalha Achievement', detail: 'Evento oficial Roblox', icon: '🎖️' },
-          { title: '+10.000 visitas totais', detail: 'Jogos publicados', icon: '📈' },
-        ],
-      },
       timeline: {
         title: 'Trajetória',
         list: [
@@ -291,15 +281,6 @@ export class AppComponent {
             stack: ['Web', 'Performance', 'SEO'],
             highlight: 'Fast institutional landing, shipped and maintained.',
           },
-        ],
-      },
-      achievements: {
-        title: 'Roblox Achievements',
-        list: [
-          { title: '100-player Crown', detail: '100 unique visitors', icon: '👑' },
-          { title: '1,000-player Crown', detail: '1,000 unique visitors', icon: '👑' },
-          { title: 'Achievement Medal', detail: 'Official Roblox event', icon: '🎖️' },
-          { title: '10,000+ total visits', detail: 'Across published games', icon: '📈' },
         ],
       },
       timeline: {
